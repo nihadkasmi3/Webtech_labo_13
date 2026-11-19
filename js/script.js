@@ -1,11 +1,19 @@
-const initialValue = 10;
-let count = initialValue;
+const limit = 10;
+let oddCount = 0;
 
-while (count >= 1) {
-    console.log(count);
-    count--;
+for(let i = 1; i <= limit; i++) {
+    const isEven = i % 2 === 0;
+    const label = isEven ? "even" : "oneven";
+
+    console.log(`${i} is ${label}`);
+
+    if (!isEven) {
+        oddCount++;
+    }
 }
-console.log(`start!`)
+const sentence = oddCount === 1 ? "Er is" : "Er zijn";
+console.log(`${sentence} ${oddCount} oneven getal${oddCount === 1 ? "" : "len"}.`);
+
 
 
 
