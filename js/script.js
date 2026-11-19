@@ -1,13 +1,12 @@
-const limit = 10;
-let sum = 0;
+const initialValue = 10;
+let count = initialValue;
 
-for(let i = 1; i <= limit; i++) {
-
-    if(i % 2 === 0){
-        sum += i;
-    }
+while (count >= 1) {
+    console.log(count);
+    count--;
 }
-console.log(`De som van alle even getallen tot en met ${limit} is ${sum}.`);
+console.log(`start!`)
+
 
 
 
