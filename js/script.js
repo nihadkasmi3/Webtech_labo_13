@@ -1,17 +1,17 @@
-let firstName = prompt(`Wat is je voornaam?`);
-let lastName = prompt(`Wat is je Achternaam?`);
-if (!firstName || !lastName) {
-    console.log(`Vul zowel voornaam als achternaam in!`);
+let year = prompt (`Wat is het jaartal?`)
+year = parseInt(year)
+
+if(year % 4 === 0) {
+    console.log(`${year} is een schrikkeljaar!`);
 }
-
-let age = prompt(`Wat is je leeftijd?`);
-age = parseInt(age);
-
-if( age > 12 && age <= 30) {
-console.log(`Welkom ${firstName} ${lastName}, je bent ${age} jaar oud.`);
+else if(year % 100 === 0) {
+    console.log(`${year} is een schrikkeljaar!`);
+}
+else if(year % 400 === 0) {
+    console.log(`${year} is een schrikkeljaar!`);
 }
 else {
-    console.log(`U behoort niet tot de gezochte leeftijdsklasse!`);
+    console.log(`${year} is geen schrikkeljaar!`);
 }
 
 
