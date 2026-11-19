@@ -1,22 +1,14 @@
-const secretNumber = "15";
-let input;
+const limit = 10;
+let sum = 0;
 
-do {
-   parseInt(prompt(`Raad het getal tussen 0 en 30:`));
-   if(isNaN(input)) {
-      console.log(`Geen geldige invoer`);
+for(let i = 1; i <= limit; i++) {
+
+    if(i % 2 === 0){
+        sum += i;
+    }
 }
-   if(input === secretNumber) {
-      console.log(`Gefeliciteerd, je hebt het goed geraden!`);
-   }
-   else if (input < secretNumber) {
-    console.log(`${input} is te laag, probeer hoger`);
-   }
-   else if(input > secretNumber){
-    console.log(`${input} is te hoog, probeer lager`);
-   }
-}
-while(input !== secretNumber);
+console.log(`De som van alle even getallen tot en met ${limit} is ${sum}.`);
+
 
 
 
