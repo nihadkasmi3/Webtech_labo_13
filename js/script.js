@@ -1,16 +1,23 @@
-const baseNumber = 7;
-const numberOfIterations = 10;
-let output = "";
+const secretNumber = "15";
+let input;
 
-for(let i = 1; i<= numberOfIterations; i++) {
-    if(i > 10) {
-        output += `${i * baseNumber},`;
-    }
-    else {
-        output += `${i * baseNumber}`;
-    }
+do {
+   parseInt(prompt(`Raad het getal tussen 0 en 30:`));
+   if(isNaN(input)) {
+      console.log(`Geen geldige invoer`);
 }
-console.log(output);
+   if(input === secretNumber) {
+      console.log(`Gefeliciteerd, je hebt het goed geraden!`);
+   }
+   else if (input < secretNumber) {
+    console.log(`${input} is te laag, probeer hoger`);
+   }
+   else if(input > secretNumber){
+    console.log(`${input} is te hoog, probeer lager`);
+   }
+}
+while(input !== secretNumber);
+
 
 
 
