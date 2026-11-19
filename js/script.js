@@ -1,34 +1,37 @@
-let startHour = parseInt(prompt(`Geef het startuur (0-23) in:`));
-let startMinute = parseInt(prompt(`Geef de startminuten (0-59) in:`));
+let number = parseInt(prompt(`Geef een cijfer tussen 0 en 10:`));
+let rating = "";
+switch (number) {
+    case 0:
+    case 1:
+    case 2:
+      rating = "Zeer slecht";
+      break;
 
-let hoursToAdd = 5;
-let minutesToAdd = 135;
+    case 3:
+    case 4:
+      rating = "Onvoldoende";
+      break;
+     
+    case 5:
+    case 6:
+      rating = "Voldoende";
+      break;  
 
-if(isNaN(startHour) || isNaN(startMinute)) {
-    console.log(`Fout: geef twee geldige getallen in.`);
+    case 7:
+    case 8:
+      rating = "Goed";
+      break;    
+
+    case 9:
+    case 10:
+      rating = "Uitstekend";
+      break;
+
+      default:
+        console.log(`Fout: geef een geldig cijfer tussen 0 en 10.`);
+        break;
 }
-else {
-    let totalMinutes = startHour * 60 + startMinute + hoursToAdd * 60 + minutesToAdd;
-
-    let daysLater = Math.floor(totalMinutes / 1440);
-    let newHour = Math.floor((totalMinutes % 1440) / 60);
-    let newMinutes = totalMinutes % 60;
-
-    let formattedHour = String(newHour).padStart(2, "0");
-    let formattedMinutes = String(newMinutes).padStart(2, "0");
-
-    console.log(`Nieuw tijdstip: ${formattedHour}:${formattedMinutes}`);
-
-    if(daysLater === 0) {
-        console.log(`Dit tijdstip valt nog op dezelfde dag.`);
-    }
-    else if(daysLater === 1) {
-        console.log(`Dit is het tijdstip 1 dag later.`);
-    }
-    else {
-        console.log(`Dit is het tijdstip ${daysLater} dagen later.`);
-    }
-}
+console.log(rating)
 
 
 
