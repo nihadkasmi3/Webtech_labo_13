@@ -1,13 +1,16 @@
-let answer = Math.floor(Math.random() * 10) + 1;
+const baseNumber = 7;
+const numberOfIterations = 10;
+let output = "";
 
-let guess = parseInt(prompt(`Raad het getal tussen 1 en 10:`));
-
-if(guess === answer) {
-    console.log(`Gefeliciteerd, je hebt het juiste getal geraden!`);
+for(let i = 1; i<= numberOfIterations; i++) {
+    if(i > 10) {
+        output += `${i * baseNumber},`;
+    }
+    else {
+        output += `${i * baseNumber}`;
+    }
 }
-else {
-    console.log(`Helaas, het juiste getal was ${answer}.`);
-}
+console.log(output);
 
 
 
